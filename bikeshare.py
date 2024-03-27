@@ -63,9 +63,11 @@ def load_data(city, month, day):
 
     Returns:
         selected_df - DataFrame containing city data filtered by month and day
+
+    dfs is an empty dictionary which gets populated dynamically by CITY_DATA. This allows for scaling up.
     """
     
-    #dictionary to store dataframes for each city
+    #dictionary to store dataframes for each city.
     dfs = {}
 
     for city_key, filename in CITY_DATA.items():
