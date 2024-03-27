@@ -3,7 +3,7 @@
 # Bikeshare Project
 
 ### Description
-Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington.
+Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington as part of Python for Data Science course.
 
 ### Files used
 - bikeshare.py
