@@ -14,7 +14,7 @@ def get_filters():
     Returns:
         city, month and day filters
     """
-    #Filter by city
+    #Filter by city. valid_city updates to True when a valid city is inputted.
     valid_city = False
     while not valid_city:
         input_city = input("What city would you like to view? Chicago, New York City, Washington or all?  \n").lower() 
