@@ -25,15 +25,11 @@ def get_filters():
 
     
     #filter by month of year (Jan - Jun)
-    valid_month = False
-    while not valid_month:
+    while True:
         input_month = input("Which month would you like to view? Jan, Feb, Mar, Apr, May, Jun or all? \n").lower() 
-        if input_month in month_data:
+        if input_month in month_data or input_month == 'all':
             month = input_month
-            valid_month = True
-        elif input_month == 'all':
-            month = input_month
-            valid_month = True
+            break
         else:
             print("Something went wrong... Try again")
     
