@@ -97,12 +97,12 @@ def load_data(city, month, day):
     #convert mixed int/float values in 'Trip Duration' column into a float.
     selected_df['Trip Duration'] = selected_df['Trip Duration'].astype(float)
     
-    #filter dataframe by month
+    #filter dataframe by month by converting 'Start Time' to month name OR month abbrevation
     if month != 'all':
         month = month.title()
         selected_df = selected_df[(selected_df['Start Time'].dt.strftime('%b') == month) | (selected_df['Start Time'].dt.strftime('%B') == month)]
     
-    #filter dataframe by day
+    #filter dataframe by day by converting 'Start Time' to day name OR day abbrevation
     if day != 'all':
         day = day.title()
         selected_df = selected_df[(selected_df['Start Time'].dt.strftime('%a') == day) | (selected_df['Start Time'].dt.strftime('%A') == day)]
