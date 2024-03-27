@@ -4,13 +4,15 @@
 
 
 ### Description
-Describe what your project is about and what it does
+Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington.
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv
+- bikeshare.py
+- chicago.csv
+- new_york_city.csv
+- washington.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
+### Packages 
+- pandas
+- time
