@@ -1,7 +1,6 @@
 ### 27th March 2024
 
-### Bikeshare Project
-
+# Bikeshare Project
 
 ### Description
 Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington.
@@ -11,7 +10,6 @@ Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washing
 - chicago.csv
 - new_york_city.csv
 - washington.csv
-
 
 ### Packages 
 - pandas
