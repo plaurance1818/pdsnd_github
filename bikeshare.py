@@ -15,15 +15,11 @@ def get_filters():
         city, month and day filters
     """
     #Filter by city
-    valid_city = False
-    while not valid_city:
+    while True:
         input_city = input("What city would you like to view? Chicago, New York City, Washington or all?  \n").lower() 
-        if input_city in CITY_DATA.keys():
+        if input_city in CITY_DATA.keys() or input_city == 'all':
             city = input_city
-            valid_city = True
-        elif input_city == 'all':
-            city = input_city
-            valid_city = True
+            break
         else:
             print("Something went wrong... Try again")
 
