@@ -34,15 +34,11 @@ def get_filters():
             print("Something went wrong... Try again")
     
     #filter by day of week
-    valid_day = False
-    while not valid_day:
+    while True:
         input_day = input("Which day of the week would you like to view? Mon, Tue, Wed, Thu, Fri, Sat, Sun or all? \n").lower()
-        if input_day in day_data:
-            valid_day = True
+        if input_day in day_data or input_day == 'all':
             day = input_day
-        elif input_day == 'all':
-            day = input_day
-            valid_day = True
+            break
         else:
             print("Something went wrong... Try again")
 
