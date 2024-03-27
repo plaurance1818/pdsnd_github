@@ -14,7 +14,7 @@ def get_filters():
     Returns:
         city, month and day filters
     """
-    #Filter by city
+    #Filter by city. valid_city updates to True when a valid city is inputted.
     valid_city = False
     while not valid_city:
         input_city = input("What city would you like to view? Chicago, New York City, Washington or all?  \n").lower() 
@@ -63,9 +63,11 @@ def load_data(city, month, day):
 
     Returns:
         selected_df - DataFrame containing city data filtered by month and day
+
+    dfs is an empty dictionary which gets populated dynamically by CITY_DATA. This allows for scaling up.
     """
     
-    #dictionary to store dataframes for each city
+    #dictionary to store dataframes for each city.
     dfs = {}
 
     for city_key, filename in CITY_DATA.items():
@@ -95,12 +97,12 @@ def load_data(city, month, day):
     #convert mixed int/float values in 'Trip Duration' column into a float.
     selected_df['Trip Duration'] = selected_df['Trip Duration'].astype(float)
     
-    #filter dataframe by month
+    #filter dataframe by month by converting 'Start Time' to month name OR month abbrevation
     if month != 'all':
         month = month.title()
         selected_df = selected_df[(selected_df['Start Time'].dt.strftime('%b') == month) | (selected_df['Start Time'].dt.strftime('%B') == month)]
     
-    #filter dataframe by day
+    #filter dataframe by day by converting 'Start Time' to day name OR day abbrevation
     if day != 'all':
         day = day.title()
         selected_df = selected_df[(selected_df['Start Time'].dt.strftime('%a') == day) | (selected_df['Start Time'].dt.strftime('%A') == day)]
