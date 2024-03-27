@@ -14,43 +14,31 @@ def get_filters():
     Returns:
         city, month and day filters
     """
-    #Filter by city. valid_city updates to True when a valid city is inputted.
-    valid_city = False
-    while not valid_city:
+    #Filter by city
+    while True:
         input_city = input("What city would you like to view? Chicago, New York City, Washington or all?  \n").lower() 
-        if input_city in CITY_DATA.keys():
+        if input_city in CITY_DATA.keys() or input_city == 'all':
             city = input_city
-            valid_city = True
-        elif input_city == 'all':
-            city = input_city
-            valid_city = True
+            break
         else:
             print("Something went wrong... Try again")
 
     
     #filter by month of year (Jan - Jun)
-    valid_month = False
-    while not valid_month:
+    while True:
         input_month = input("Which month would you like to view? Jan, Feb, Mar, Apr, May, Jun or all? \n").lower() 
-        if input_month in month_data:
+        if input_month in month_data or input_month == 'all':
             month = input_month
-            valid_month = True
-        elif input_month == 'all':
-            month = input_month
-            valid_month = True
+            break
         else:
             print("Something went wrong... Try again")
     
     #filter by day of week
-    valid_day = False
-    while not valid_day:
+    while True:
         input_day = input("Which day of the week would you like to view? Mon, Tue, Wed, Thu, Fri, Sat, Sun or all? \n").lower()
-        if input_day in day_data:
-            valid_day = True
+        if input_day in day_data or input_day == 'all':
             day = input_day
-        elif input_day == 'all':
-            day = input_day
-            valid_day = True
+            break
         else:
             print("Something went wrong... Try again")
 
