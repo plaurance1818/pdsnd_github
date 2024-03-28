@@ -19,3 +19,6 @@ Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washing
 
 ### Packages Used
 - Pandas
+
+### Credits
+Thanks to Udacity for great learning materials.
