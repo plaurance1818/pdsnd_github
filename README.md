@@ -7,7 +7,7 @@ Include the date you created this project and README file.
 Replace the Project Title
 
 ### Description
-Describe what your project is about and what it does
+Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington as part of Python for Data Science course.
 
 ### Files used
 Include the files used
