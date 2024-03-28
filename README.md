@@ -10,7 +10,12 @@
 Data anaylsys on US Bikeshare data for cities Chicago, New York City and Washington as part of Python for Data Science course.
 
 ### Files used
-Include the files used
+- bikeshare.py
+
+### Data files
+chicago.csv
+- new_york_city.csv
+- washington.csv
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
