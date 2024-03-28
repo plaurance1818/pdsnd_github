@@ -14,7 +14,7 @@ def get_filters():
     Returns:
         city, month and day filters
     """
-    #Filter by city
+    #If input_city exists or = 'all' assign to city
     while True:
         input_city = input("What city would you like to view? Chicago, New York City, Washington or all?  \n").lower() 
         if input_city in CITY_DATA.keys() or input_city == 'all':
